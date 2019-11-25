@@ -29,4 +29,18 @@ public class HighOrderTest {
     Assert.assertEquals(2, newIntegerList.get(0).intValue());
   }
 
+  @Test
+  public void returnsANumberFromAListFunctional() {
+    List<Integer> integerList = Arrays.asList(1, 2, 3, 4, 5);
+    Integer number = HighOrder.findNumberFunctional(2, integerList);
+    Assert.assertEquals(2, number.intValue());
+  }
+
+  @Test
+  public void returnsSumValuesFunctional() {
+    List<Integer> integerList = Arrays.asList(1, 2, 3, 4, 5);
+    Integer number = HighOrder.sumValuesFunctional(integerList);
+    Assert.assertEquals(15, number.intValue());
+  }
+
 }

@@ -28,4 +28,19 @@ public class HighOrder {
     }
     return list;
   }
+  public static Integer findNumberFunctional(Integer number, List<Integer> list) {
+
+    return list.stream()
+            .filter(d -> d == number )
+            .findFirst().get(); // revisar con el OrElse
+  }
+
+  public static Integer sumValuesFunctional(List<Integer> list) {
+
+    return list.stream()
+            .mapToInt(a -> a.intValue())
+            .sum();  // usar reduce().
+
+
+  }
 }
